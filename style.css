@@ -1,0 +1,50 @@
+@font-face {
+    font-family: Raleway;
+    src: url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+  }
+
+html {
+    background-image : url("background_waiting.jpg");
+    background-position: center;
+}
+
+body {
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 200px;
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    padding-top: 15%;
+}
+
+.shine {
+    background: #222 -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#222),
+        to(#222),
+        color-stop(0.5, #fff)
+      ) 0 0 no-repeat;
+    -webkit-background-size: 125px;
+    color: rgba(255, 255, 255, 0.1);
+    -webkit-background-clip: text;
+    -webkit-animation-name: shine;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  @-webkit-keyframes shine {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
+  
