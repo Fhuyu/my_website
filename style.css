@@ -1,50 +1,80 @@
 @font-face {
-    font-family: Raleway;
-    src: url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+    font-family: 'Roboto Mono', monospace;
+    src: url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
   }
 
 html {
     background-image : url("background_waiting.jpg");
     background-position: center;
+    background-size: cover;
 }
 
 body {
     height: 100%;
     background-color: rgba(0,0,0,0.5);
     margin: 0;
+    /* Set "horizontalnumber" to 0 */
+    counter-reset: horizontalnumber;
 }
 
-h1 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 200px;
-    text-align: center;
-    color: rgba(255,255,255,0.7);
-    padding-top: 15%;
+#codewindow {
+  background: black;
+  border-radius: 10px;
+  height: 400px;
+  width: 70%;
+  position: absolute;
+  transform: translate(20%, 60%);
+  padding: 5px;
+  padding-top: 30px;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+}
+#topwindow {
+  width: 100%;
+  height: 20px;
+  background-image: linear-gradient(#515151, #2b2b2b);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
 }
 
-.shine {
-    background: #222 -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(#222),
-        to(#222),
-        color-stop(0.5, #fff)
-      ) 0 0 no-repeat;
-    -webkit-background-size: 125px;
-    color: rgba(255, 255, 255, 0.1);
-    -webkit-background-clip: text;
-    -webkit-animation-name: shine;
-    -webkit-animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-  }
-  
-  @-webkit-keyframes shine {
-    0% {
-      background-position: top left;
-    }
-    100% {
-      background-position: top right;
-    }
-  }
-  
+#codewindow span {
+  color:white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 18px;
+}
+#codewindow .numberwindow span::before {
+   /*Increment "my-sec-counter" by 1 */
+  counter-increment: horizontalnumber;
+  content: counter(horizontalnumber);
+}
+.numberwindow {
+  float: left;
+    width: 20px;
+    padding: 0 10px;
+}
+
+span.dot {
+  color: black!important;
+  font-size: 12px!important;
+  text-align: center;
+  line-height: 0.9;
+  height: 13px;
+  top: 3;
+  width: 13px;
+  border-radius: 50px;
+  position: absolute;
+}
+.red.dot {
+  right: 5;
+  background-image: linear-gradient(#cc5226, #c13603);
+}
+.grey.dot:first-child {
+  right: 40;
+  background-image: linear-gradient(#777676, #5e5c5c);
+}
+#topwindow .grey.dot:nth-child(2) {
+  right: 22;
+  background-image: linear-gradient(#777676, #5e5c5c);
+}
