@@ -3,21 +3,26 @@
     src: url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
   }
 
-html {
+/* html {
     background-image : url("background_waiting.jpg");
     background-position: center;
     background-size: cover;
-}
+} */
 
 body {
-    height: 100%;
+/*     height: 100%;
     background-color: rgba(0,0,0,0.5);
-    margin: 0;
+    margin: 0; */
     /* Set "horizontalnumber" to 0 */
     counter-reset: horizontalnumber;
+    background: linear-gradient(#e66465, #9198e5);
+}
+#particles-js {
+  height: 100%;
+  
 }
 
-#codewindow {
+.codewindow {
   background: black;
   border-radius: 10px;
   height: 400px;
@@ -28,7 +33,7 @@ body {
   padding-top: 30px;
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
 }
-#topwindow {
+.topwindow {
   width: 100%;
   height: 20px;
   background-image: linear-gradient(#515151, #2b2b2b);
@@ -39,12 +44,12 @@ body {
   border-top-left-radius: 7px;
 }
 
-#codewindow span {
+.codewindow span {
   color:white;
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
 }
-#codewindow .numberwindow span::before {
+.codewindow .numberwindow span::before {
    /*Increment "my-sec-counter" by 1 */
   counter-increment: horizontalnumber;
   content: counter(horizontalnumber);
@@ -74,7 +79,7 @@ span.dot {
   right: 40;
   background-image: linear-gradient(#777676, #5e5c5c);
 }
-#topwindow .grey.dot:nth-child(2) {
+.topwindow .grey.dot:nth-child(2) {
   right: 22;
   background-image: linear-gradient(#777676, #5e5c5c);
 }
