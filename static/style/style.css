@@ -80,20 +80,26 @@ body {
   right: 22;
   background-image: linear-gradient(#777676, #5e5c5c);
 }
-#infoswindow {
+#content {
   height: 400px;
   overflow: auto;
 }
 /* ----- CODE COLOR ----- */
+.codewindow .comment {
+  color: #0E7E29;
+}
+.codewindow .main {
+  padding-left: 40px;
+}
 .codewindow .sub.section {
   color: #5C87BA;
 }
 .codewindow .section {
-  margin-left: 40px;
+  padding-left: 80px;
 }
 .codewindow .key {
   color: #95DEE3;
-  margin-left: 80px;
+  padding-left: 120px;
 }
 .codewindow .number {
   color: #AED49D;
