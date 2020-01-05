@@ -3,24 +3,21 @@
     src: url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
   }
 
-/* html {
-    background-image : url("background_waiting.jpg");
-    background-position: center;
-    background-size: cover;
-} */
-
 body {
-/*     height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    margin: 0; */
-    /* Set "horizontalnumber" to 0 */
     counter-reset: horizontalnumber;
     background: linear-gradient(#e66465, #9198e5);
 }
+
 #particles-js {
   height: 100%;
   
 }
+/* ----- CODE ----- */
+/* top */
+#titlewindow {
+
+}
+/* content */
 
 .codewindow {
   background: black;
@@ -50,17 +47,16 @@ body {
   font-size: 18px;
 }
 .codewindow .numberwindow span::before {
-   /*Increment "my-sec-counter" by 1 */
   counter-increment: horizontalnumber;
   content: counter(horizontalnumber);
 }
 .numberwindow {
   float: left;
-    width: 20px;
-    padding: 0 10px;
+  width: 20px;
+  padding: 0 10px;
 }
 
-span.dot {
+.dot span {
   color: black!important;
   font-size: 12px!important;
   text-align: center;
@@ -71,15 +67,37 @@ span.dot {
   border-radius: 50px;
   position: absolute;
 }
-.red.dot {
+/* linux button */
+.dot .red {
   right: 5;
   background-image: linear-gradient(#cc5226, #c13603);
 }
-.grey.dot:first-child {
+.dot .grey:first-child {
   right: 40;
   background-image: linear-gradient(#777676, #5e5c5c);
 }
-.topwindow .grey.dot:nth-child(2) {
+.topwindow .dot .grey:nth-child(2) {
   right: 22;
   background-image: linear-gradient(#777676, #5e5c5c);
+}
+#infoswindow {
+  height: 400px;
+  overflow: auto;
+}
+/* ----- CODE COLOR ----- */
+.codewindow .sub.section {
+  color: #5C87BA;
+}
+.codewindow .section {
+  margin-left: 40px;
+}
+.codewindow .key {
+  color: #95DEE3;
+  margin-left: 80px;
+}
+.codewindow .number {
+  color: #AED49D;
+}
+.codewindow .sentence {
+  color : #D88B78;
 }
