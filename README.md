@@ -1,5 +1,4 @@
 # my_website
-aurore-chayrouse.fr
 
 # TODO 
 - Closable window (with animation ?)
